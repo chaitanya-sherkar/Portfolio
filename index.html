@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rishabh Mishra Portfolio</title>
+    <title>Chaitanya Sherkar Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -109,6 +109,85 @@
   transform: scale(1.1);
 }
 
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+  border-radius: 15px;
+  background: #18191a;
+  color: #fff;
+  box-shadow: 0 0 10px #0002;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 30px;
+  bottom: 30px;
+  width: 3px;
+  background: #ffbd39;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-dot {
+  position: absolute;
+  left: -2px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: #18191a;
+  border: 3px solid #ffbd39;
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline-content {
+  margin-left: 30px;
+  background: #222;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+}
+.timeline-content h2, .timeline-content h5, .timeline-content p {
+  margin: 0 0 8px 0;
+}
+.timeline-content h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.timeline-content h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.timeline-content p {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.timeline-content i {
+  margin-right: 8px;
+  color: #ffbd39;
+  font-size: 1.2rem;
+}
+
+/* Add hover animation for selected containers */
+.service-box, .blog-entry, .align-self-stretch.box {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.service-box:hover, .blog-entry:hover, .align-self-stretch.box:hover {
+  transform: scale(1.05) translateY(-12px);
+  box-shadow: 0 16px 40px 0 rgba(255,189,57,0.25), 0 4px 16px 0 rgba(0,0,0,0.15);
+  border: 2px solid #ffbd39;
+  z-index: 3;
+}
 
 </style>
 
@@ -119,7 +198,7 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Rishabh Mishra</a>
+	      <a class="navbar-brand" href="index.html">Chaitanya Sherkar</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -128,7 +207,8 @@
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+			  <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
@@ -147,51 +227,13 @@
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Rishabh Mishra</span></h1>
+			            <h1 class="mb-4 mt-3">I'm <span>Chaitanya Sherkar</span></h1>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineer  ',
-						'YouTuber  ',
-						'Teacher   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
+						
 						<br>
-						<br>
-			            <h2>A Senior Data Analyst</h2>
+			            <h2>A Mechanical Engineer</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
-			            <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> 
-							<a href="https://github.com/rishabhnmishra" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -213,23 +255,23 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/profile_image.jpg" class="img-fluid rounded b-shadow-a" alt="">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Rishabh Mishra</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
-										<p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
+										<p><span class="title-s">Name: </span> <span>Chaitanya Sherkar</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Mechanical Engineer</span></p>
+										<p><span class="title-s">Age: </span> <span>22</span></p>
+										<p><span class="title-s">Address: </span> <span>Pune, India</span></p>
 									  </div>
 									</div>
 								  </div>
 
 								<div class="skill-mf">
 									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">95%</span>
+									<span>Fusion 360</span> <span class="pull-right">95%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
 											aria-valuemax="100"></div>
@@ -241,19 +283,19 @@
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<span>Catia</span> <span class="pull-right">90%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<span>C++</span> <span class="pull-right">85%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<span>AutoCAD</span> <span class="pull-right">80%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
 											aria-valuemax="100"></div>
@@ -270,17 +312,15 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>With over 5 years of comprehensive experience in the field of data science & analytics, accompanied by a bachelor's degree in engineering. 
-									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
-									Demonstrated success in leading impactful projects and providing effective mentorship.</p>
+								<p>Greetings! I'm Chaitanya Sherkar, a passionate mechanical engineering student based in Pune. I pride myself on being a detail-oriented problem solver who combines technical expertise with creative thinking. My strong analytical skills and innovative mindset allow me to tackle complex challenges head-on, while my collaborative nature makes me an effective team player.
+
+									I am currently in my final year of B.Tech in Mechanical Engineering at MIT Academy of Engineering, Pune, maintaining a CGPA of 7/10. My academic journey has equipped me with both theoretical knowledge and hands-on experience in mechanical design, CAD modeling, and engineering analysis.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>Engineer &amp; 3D Artist</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi &amp; Marathi</span></li>
+									<li class="d-flex"><span>Hobbies:</span> <span>Photography, gardening &amp; Reading</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>MatLab, Design, Excel, PowerPoint &amp; SEO</span></li>
 									
 								</ul>
 							</div>
@@ -290,10 +330,10 @@
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
 							<div class="text">
 								<p class="mb-4">
-									<span class="number" data-number="30">0</span> <span>+</span>
+									<span class="number" data-number="3">0</span> <span>+</span>
 									<span>&nbsp; Projects completed</span>
 								</p>
-								<p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+								
 							</div>
 						</div>
 					</div>
@@ -302,95 +342,94 @@
 		</div>
     </section>
 
-
+	
 
 	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+    <section class="ftco-section" id="skills-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+          	<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">Skills</h2>
+            <p>Proficient in various CAD software and programming languages, with extensive experience in 3D modeling, mechanical design, and technical documentation. Skilled in creating detailed designs and implementing efficient solutions.</p>
           </div>
         </div>
 
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
 		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2021-Present</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">Merkle</span>
-						<p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International. 
-							<ul>
-								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
-								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
-								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
-							</ul>
-						</p>
-					</div>
-
+				
+		<div class="row service-container">
+			<div class="col-md-3">
+				<div class="service-box ftco-animate">
+					<img src="images/fusion_360.png" alt="Fusion 360" class="service-img">
+					<h3 class="service-title">Fusion 360</h3>
+					<p class="service-text">Advanced 3D modeling and parametric design using Fusion 360 for product development and manufacturing.</p>
 				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2018-2021</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">iQuanti</span>
-						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
-							<ul>
-								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
-								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-							</ul>
-						</p>
-					</div>
-
+			</div>	
+			
+			<div class="col-md-3">
+				<div class="service-box ftco-animate">
+					<img src="images/auto_cad.jpeg" alt="AutoCAD" class="service-img">
+					<h3 class="service-title">AutoCAD</h3>
+					<p class="service-text">Comprehensive 2D/3D design and drafting using AutoCAD for precise technical documentation.</p>
 				</div>
 			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2014-2018</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Visvesvaraya Technological University</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2012-2013</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">Army Public School</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
+			
+			<div class="col-md-3">
+				<div class="service-box ftco-animate">
+					<img src="images/cpp.png" alt="C++" class="service-img">
+					<h3 class="service-title">C++</h3>
+					<p class="service-text">Object-oriented programming and software development using C++ for engineering applications.</p>
 				</div>
-    		</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="service-box ftco-animate">
+					<img src="images/catia.jpeg" alt="CATIA" class="service-img">
+					<h3 class="service-title">Catia</h3>
+					<p class="service-text">Expert-level CATIA modeling for complex mechanical assemblies and surface design.</p>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+		<br>
+		<br>
 
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+		<section class="ftco-section" id="education-section">
+		  <div class="container">
+			<div class="row">
+			  <h1 class="big-4">Education</h1>
+			  <div class="underline"></div>
+			</div>
+			<br>
+			<div class="timeline">
+			  <div class="timeline-item">
+				<div class="timeline-dot"></div>
+				<div class="timeline-content">
+				  <h2>B-Tech 7 CGPA</h2>
+				  <h5>Mit Academy of Engineering, Alandi</h5>
+				  <p><i class="ion-ios-calendar"></i> 2021-2025</p>
+				</div>
+			  </div>
+			  <div class="timeline-item">
+				<div class="timeline-dot"></div>
+				<div class="timeline-content">
+				  <h2>HSC-89%</h2>
+				  <h5>Pragat Vidyalaya, Ahmednagar</h5>
+				  <p><i class="ion-ios-calendar"></i> 2020-2021</p>
+				</div>
+			  </div>
+			  <div class="timeline-item">
+				<div class="timeline-dot"></div>
+				<div class="timeline-content">
+				  <h2>SSC-77%</h2>
+				  <h5>K V MIRC, Ahmednagar</h5>
+				  <p><i class="ion-ios-calendar"></i> 2018-2019</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</section>
 
    
 
@@ -400,127 +439,49 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+            <p>Below are the engineering projects on Solar Energy, Machine Lerning, electronis.</p>
           </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              <a href="https://github.com/ChaitanyaSherkar/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a></h3>
-                <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p>
+                <h3 class="heading"><a href="https://github.com/ChaitanyaSherkar/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Solar Grass Cutter</a></h3>
+                <p>We developed a grass cutting machine that operates using solar energy, reducing reliance on conventional electricity or fuel.
+					To promote sustainable and eco-friendly lawn maintenance with zero emissions.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              <a href="https://github.com/ChaitanyaSherkar/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpeg');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a></h3>
-                <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+                <h3 class="heading"><a href="https://github.com/ChaitanyaSherkar/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">SEM Image Details Prediction</a></h3>
+                <p>This project developed an automated method using CNNs and image processing to classify SEM images of metal powder particles into four shapes: spherical, angular, flakey, and irregular. It improves efficiency and accuracy over manual analysis,
+					benefiting the additive manufacturing sector by ensuring consistent quality. Future enhancements may include broader categorization, real-time analysis, and adaptability to various materials and industries.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              <a href="https://github.com/ChaitanyaSherkar/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/wproj.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a></h3>
-                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+                <h3 class="heading"><a href="https://github.com/ChaitanyaSherkar/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Thermoelectric Refrigerator</a></h3>
+                <p>This project involves a compact thermoelectric refrigerator for pathology labs to store blood samples at 2°C–4°C using eco-friendly Peltier modules. It performs well under low and moderate loads but requires improvements for high-load efficiency, making it suitable for small-scale medical use.</p>
               </div>
             </div>
           </div>
         </div>
 	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
-				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
-				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
+		
     </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="30">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
-
-
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
@@ -539,7 +500,7 @@
           			<span class="icon-map-signs"></span>
           		</div>
           		<h3 class="mb-4">Address</h3>
-	            <p>Bengaluru, India</p>
+	            <p>Pune, Maharashtra, India, 412105</p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -548,7 +509,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+ 0 101 0101 101</a></p>
+	            <p><a href="tel://0101010101">8624900533</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -557,7 +518,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">conctact@domainname.com</a></p>
+	            <p><a href="mailto:info@yoursite.com">chaitanya.sherkar@mitaoe.ac.in</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -566,47 +527,45 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
+	            <p>
+	              <a href="Chaitanya_Resume.pdf" download class="btn btn-primary py-2 px-4" style="background:#ffbd39; color:#222; border:none; border-radius:8px; font-weight:bold;" onclick="return checkFileExists(this.href);">
+	                Download resume
+	              </a>
+	            </p>
 	          </div>
           </div>
+          <script>
+          function checkFileExists(url) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('HEAD', url, false);
+            try {
+              xhr.send();
+              if (xhr.status === 404) {
+                alert('Sorry, the resume file is not available at the moment.');
+                return false;
+              }
+              return true;
+            } catch(e) {
+              alert('Sorry, there was an error accessing the resume file.');
+              return false;
+            }
+          }
+          </script>
 
 		  <div class="container">
 			<br>
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmENqJh14p4jHGCSpf2U3n7N8QpYpT5bkce0SivPQncagwOw/viewform?usp=sharing" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
 				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rishabhnmishra/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
+			
    </div>
  </section>
 
 
  
 	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
 
 
   <!-- loader -->
